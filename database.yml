@@ -1,6 +1,6 @@
 development:
-  adapter: sqlite3
+  adapter: postgresql
   database: hokou.db
 database2:
-  adapter: sqlite3
+  adapter: postgresql
   database: passwd.db
