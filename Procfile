@@ -1,1 +1,1 @@
-web: bundle exec ruby hokou.rb
+web: bundle exec ruby hokou.rb -p $PORT
