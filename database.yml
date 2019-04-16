@@ -1,0 +1,6 @@
+development:
+  adapter: sqlite3
+  database: hokou.db
+database2:
+  adapter: sqlite3
+  database: passwd.db

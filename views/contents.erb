@@ -1,0 +1,81 @@
+﻿<form>
+  <select id ="grade">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  年
+  <input type="button" value= "検索" onClick="search();">
+</form>
+
+<div id="results"></div>
+<br><br><br>
+
+<%if @teacher %>
+新規補講
+<form method ="post" action="new">
+
+  <select name ="grade">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>の
+  <select name ="dptmnt">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="M">M</option>
+    <option value="E">E</option>
+    <option value="S">S</option>
+    <option value="J">J</option>
+    <option value="C">C</option>
+  </select><br>
+  科目：
+  <input type="text" name="subject" maxlength="40"><br>
+  教員：
+  <input type="text" name="teacher" maxlength="40"><br>
+  補講日：
+  <select name ="date_ex_year">
+    <option value="<%=@time.year%>"><%=@time.year%></option>
+    <option value="<%=@time.year+1%>"><%=@time.year+1%></option>
+  </select>年
+  <select name ="date_ex_month">
+    <%(1..12).each do |month| %>
+    <option value="<%=month%>"><%=month%></option>
+    <%end%>
+  </select>月
+  <select name ="date_ex_day">
+    <%(1..31).each do |day| %>
+    <option value="<%=day%>"><%=day%></option>
+    <%end%>
+  </select>日
+  <input type="text" name="koma_ex" maxlength="40" cols="5">コマ<br>
+  休講日：
+  <select name ="date_rest_year">
+    <option value="<%=@time.year%>"><%=@time.year%></option>
+    <option value="<%=@time.year+1%>"><%=@time.year+1%></option>
+  </select>年
+  <select name ="date_rest_month">
+    <%(1..12).each do |month| %>
+    <option value="<%=month%>"><%=month%></option>
+    <%end%>
+  </select>月
+  <select name ="date_rest_day">
+    <%(1..31).each do |day| %>
+    <option value="<%=day%>"><%=day%></option>
+    <%end%>
+  </select>日
+  <input type="text" name="koma_rest" maxlength="40">コマ<br>
+  備考<br>
+  <textarea name="bikou" maxlength="140" rows="5" cols="40"></textarea>
+  <input type="submit" value="確定">
+</form>
+<%end%>
+<br><br>
+<a href="/logout">ログアウト</a>
