@@ -1,2 +1,2 @@
-require './{hokou}'
+require './hokou'
 run Sinatra::Application
