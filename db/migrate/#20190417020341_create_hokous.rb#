@@ -1,0 +1,15 @@
+class CreateHokous < ActiveRecord::Migration[5.2]
+  def change
+    create_table(:hokous,:primary_key => 'guid')  do |t|
+     t.column :grade, :int
+     t.column :dptmnt, :string, limit: 4
+     t.column :date_rest, :date
+     t.column :koma_rest, :string, limit: 40
+     t.column :date_ex, :date
+     t.column :koma_ex, :string, limit: 40
+     t.column :subject, :string, limit: 40
+     t.column :teacher, :string, limit: 40
+     t.column :bikou, :string, limit: 140
+    end
+  end
+end

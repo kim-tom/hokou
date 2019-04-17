@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'sinatra'
 require 'active_record'
 
@@ -6,13 +7,13 @@ set :sessions,
 expire_after: 7200,
 secret: '7pfmkgzf2dz0otvznmly'
 
-ActiveRecord::Base.configurations=YAML.load_file('database.yml')
-
+ActiveRecord::Base.configurations=YAML.load_file('config/database.yml')
+ActiveRecord::Base.establish_connection :development
 class Hokou <ActiveRecord::Base
-  establish_connection :development
+  self.table_name = "hokous"
 end
 class Account <ActiveRecord::Base
-  establish_connection :database2
+  self.table_name = "accounts"
 end
 
 get '/' do

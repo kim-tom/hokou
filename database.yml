@@ -1,6 +1,0 @@
-development:
-  adapter: postgresql
-  database: hokou.db
-database2:
-  adapter: postgresql
-  database: passwd.db
