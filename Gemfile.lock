@@ -23,6 +23,9 @@ GEM
     rack-protection (2.0.5)
       rack
     rake (12.3.2)
+    seed-fu (2.3.9)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -43,6 +46,7 @@ DEPENDENCIES
   activerecord
   pg
   rake
+  seed-fu
   sinatra
   sinatra-activerecord
 

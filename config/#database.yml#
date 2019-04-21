@@ -1,4 +1,0 @@
-development:
-  adapter: postgresql
-  port: 5432
-  database: postgres://alumdquwbvcjwm:32a670a200af98863cacc9caa5db7ccb441f72da7f7edeb2a1c85321f4f9ac46@ec2-54-225-113-7.compute-1.amazonaws.com:5432/d7i8v5g5ime72q

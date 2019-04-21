@@ -6,4 +6,5 @@ gem "sinatra"
 gem "pg"
 gem "activerecord"
 gem "rake"
+gem "seed-fu"
 gem 'sinatra-activerecord'
