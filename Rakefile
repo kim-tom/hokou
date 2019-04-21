@@ -5,6 +5,8 @@ require 'sinatra/activerecord/rake'
 require 'seed-fu'
 require './hokou'
 
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+
 namespace :db do
   task :seed_fu do
     SeedFu.seed
