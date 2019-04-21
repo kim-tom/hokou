@@ -1,7 +1,6 @@
 class CreateAccounts < ActiveRecord::Migration[5.2]
   def change
-    create_table(:accounts,id: :string) do |t|
-      t.string:username, :string, limit: 40
+    create_table(:accounts) do |t|
       t.column :salt, :string, limit: 40
       t.column :hashed, :string, limit: 40
       t.column :algo, :string, limit: 5

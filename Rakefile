@@ -4,8 +4,9 @@ require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 require 'seed-fu'
 require './hokou'
-
-ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+ActiveRecord::Base.configurations=YAML.load_file('config/database.yml')
+ActiveRecord::Base.establish_connection :development
+#ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
 
 namespace :db do
   task :seed_fu do
