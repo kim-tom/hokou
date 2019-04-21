@@ -1,3 +1,4 @@
 development:
   adapter: postgresql
   database: HEROKU_POSTGRESQL_BRONZE_URL
+  host: localhost
