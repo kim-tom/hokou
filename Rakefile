@@ -1,8 +1,9 @@
 # coding: utf-8
-require './hokou'
+
 require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 require 'seed-fu'
+require './hokou'
 
 namespace :db do
   task :seed_fu do
