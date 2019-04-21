@@ -1,4 +1,5 @@
 # coding: utf-8
+require './hokou'
 require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 require 'seed-fu'
