@@ -7,8 +7,7 @@ set :sessions,
 expire_after: 7200,
 secret: '7pfmkgzf2dz0otvznmly'
 
-ActiveRecord::Base.configurations=YAML.load_file('config/database.yml')
-ActiveRecord::Base.establish_connection :development
+ActiveRecord::Base.establish_connection ENV['DATABASE_URL']
 class Hokou <ActiveRecord::Base
   self.table_name = "hokous"
 end
