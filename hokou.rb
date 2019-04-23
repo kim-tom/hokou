@@ -7,7 +7,7 @@ set :sessions,
 expire_after: 7200,
 secret: '7pfmkgzf2dz0otvznmly'
 
-ActiveRecord::Base.establish_connection ENV['DATABASE_URL']
+ActiveRecord::Base.establish_connection :production
 class Hokou <ActiveRecord::Base
   self.table_name = "hokous"
 end

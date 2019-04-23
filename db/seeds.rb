@@ -3,7 +3,7 @@ require 'digest/md5'
 require 'active_record'
 
 ActiveRecord::Base.configurations=YAML.load_file('config/database.yml')
-ActiveRecord::Base.establish_connection ENV['DATABASE_URL']
+ActiveRecord::Base.establish_connection :production
 
 class Account <ActiveRecord::Base
   self.table_name = "accounts"
